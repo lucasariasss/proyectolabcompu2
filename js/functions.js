@@ -31,33 +31,14 @@ $(function(){
       pos=0;
       $('#pos1').removeClass('activo');
       $('#pos2').removeClass('activo');
-      $('#pos3').removeClass('activo');
-      $('#pos4').removeClass('activo');
     }
-    if (pos>=4) {
-      pos=4;
-      $('#pos1').removeClass('activo');
-      $('#pos2').removeClass('activo');
-      $('#pos3').removeClass('activo');
-      $('#pos4').addClass('activo');
-    }
-    if (pos==3) {
-      $('#pos1').removeClass('activo');
-      $('#pos2').removeClass('activo');
-      $('#pos3').addClass('activo');
-      $('#pos4').removeClass('activo');
-    }
-    if (pos==2) {
+    if (pos>=2) {
       $('#pos1').removeClass('activo');
       $('#pos2').addClass('activo');
-      $('#pos3').removeClass('activo');
-      $('#pos4').removeClass('activo');
     }
     if (pos==1) {
       $('#pos1').addClass('activo');
       $('#pos2').removeClass('activo');
-      $('#pos3').removeClass('activo');
-      $('#pos4').removeClass('activo');
     }
   }//obtener posiscion
   $('#pos0').on('click', function(){
@@ -75,16 +56,6 @@ $(function(){
   });
   $('#pos2').on('click', function(){
     pos = 2;
-    barraBurger()
-    condicion();
-  });
-  $('#pos3').on('click', function(){
-    pos = 3;
-    barraBurger()
-    condicion();
-  });
-  $('#pos4').on('click', function(){
-    pos = 4;
     barraBurger()
     condicion();
   });
