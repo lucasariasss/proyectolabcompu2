@@ -240,16 +240,6 @@ section .contenedor{
     height: 100%
   }
 }
-.columnas-4{
-  flex: 0 0 49%;
-  height: 24.5%;
-}
-@media (min-width: 768px) {
-  .columnas-4{
-    flex: 0 0 24.5%;
-    height: 49%;
-  }
-}
 /*barra*/
 .contenedor-barra{
   display: none;
@@ -383,83 +373,11 @@ section .contenedor{
   }
 }
 /*header*/
-.fondo{
-  background-image: url(img\setfiles\Recurso1.png);
-  margin: 60.5px auto;
-  margin-bottom: 0;
-  width: 80%;
-  height: calc(100vh - 60.5px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-@media (min-width: 440px) {
-  .fondo{
-    display: none;
-  }
-}
 .llenar{  
   width: calc(100vw);
   height: calc(100vh) ;
 }
-/*servicios*/
-.caja-servicios{
-  flex: 100%;
-  flex-direction: column-reverse;
-  padding: 5% 5% 5% 3% ;
-}
-@media(min-width: 768px){
-  .caja-servicios{
-    flex-direction: row !important;
-  }
-}
-.caja-servicios .scroll{
-  height:35%;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .caja-servicios .scroll{
-    height:100%;
-    width: 50%;
-  }
-}
-.carpeta{
-  height: 70% !important;
-  width: 100%;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 768px) {
-  .carpeta{
-    height: 100%;
-    width: 49%;
-  }
-}
-.galeria{
-  border-bottom: 1px solid #e1e1e1;
-  width: 95%;
-  padding: 5px;
-}
-.imagenes{
-  overflow: hidden;
-  padding: 5px;
-}
-.imagenes a img{
-  height: 15vh;
-  width: calc(33.3% - 5px);
-  transition: .5s;
-  object-fit: cover;
-}
-@media (min-width: 768px) {
-  .imagenes a img{
-    height: 10vh;
-    width: calc(25% - 5px);
-  }
-  .imagenes a img:hover{
-    transform: scale(1.1);
-  }
-}
+
 /*modulos*/
 #moduloAlfa{
   margin-right: auto;

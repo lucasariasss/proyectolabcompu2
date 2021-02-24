@@ -30,15 +30,9 @@ $(function(){
     if (pos<=0) {
       pos=0;
       $('#pos1').removeClass('activo');
-      $('#pos2').removeClass('activo');
     }
-    if (pos>=2) {
-      $('#pos1').removeClass('activo');
-      $('#pos2').addClass('activo');
-    }
-    if (pos==1) {
+    if (pos>=1) {
       $('#pos1').addClass('activo');
-      $('#pos2').removeClass('activo');
     }
   }//obtener posiscion
   $('#pos0').on('click', function(){
@@ -51,11 +45,6 @@ $(function(){
   });
   $('#pos1').on('click', function(){
     pos = 1;
-    barraBurger()
-    condicion();
-  });
-  $('#pos2').on('click', function(){
-    pos = 2;
     barraBurger()
     condicion();
   });
@@ -155,6 +144,7 @@ $(function(){
     $(contenedorDeModulos).delay(400).fadeIn(300);
 
   });//ver bloques
+  
   //ver galeria
   var ver_galeria = $('.ver-galeria');
   ver_galeria.on('click', function(){
@@ -164,6 +154,7 @@ $(function(){
     $(opacidad).fadeOut(200);
     $(contenedorGaleria).delay(200).fadeIn(300);
   });//ver galeria
+
   //ver informacion
   var ver_info = $('.ver-info');
   ver_info.on('click', function(){
@@ -173,6 +164,7 @@ $(function(){
     $(opacidad).fadeOut(200);
     $(informacion).delay(400).fadeIn(300);
   })//ver informacion
+
   //ver preguntas frecuentes
   var ver_preguntas = $('.ver-preguntas');
   ver_preguntas.on('click', function(){
@@ -182,112 +174,6 @@ $(function(){
     $(opacidad).fadeOut(200);
     $(preguntas).delay(400).fadeIn(300);
   })//ver preguntas frecuentes
-
-  //expansion galerias de servicios
-  var imagenes = $('.imagenes');
-  var textoGaleria = $('.texto-galeria');
-  var galeriaServicios = 0;
-  var abierto;
-  $.each(textoGaleria, function(i){
-    $(textoGaleria[i]).on('click', function(){
-      width = parseInt($(window).width(), 10);
-      windowHeigth = parseInt($(window).height(), 10);
-      for(var i = 0; i < textoGaleria.length; i++){
-        if(this == textoGaleria[i]){
-          $(imagenes[i]).show(500);
-          if(galeriaServicios==0){
-            galeriaServicios=1;
-          }else{
-            if(this == abierto){
-              $(imagenes[i]).hide(750);
-              galeriaServicios=0;
-            }else{
-              galeriaServicios=1;
-            }
-          }
-          abierto=textoGaleria[i];
-        }else{
-          $(imagenes[i]).hide(750);
-        }
-      }
-    })
-  })//expansion galerias de servicios
-
-  //expancion servicios
-  var sobreimagen = 0;
-  $('.galeria').on('mouseover', function(){
-    sobreimagen = 1;
-  });
-  $('.galeria').on('mouseout', function(){
-    sobreimagen = 0;
-  });
-
-  var servicios = ['#factibilidades', '#proyectos', '#ejecucion', '#direccionTecnica', '#obras', '#concursos', '#relevamientos', '#desarrollo'];
-  var expandidoS = 0;
-  $.each(servicios, function(i){
-    var clicked = i;
-    $(servicios[i]).on('click', function(i){
-      width = parseInt($(window).width(), 10);
-      windowHeigth = parseInt($(window).height(), 10);
-      logo();
-      var expandir = '#'+$(this).attr('id');
-      for (var i = 0; i < servicios.length; i++) {
-        var portada = $(servicios[i]).children()[0];
-        var titulo = $(servicios[i]).children()[1];
-        var galeria = $(servicios[i]).children()[2];
-        var scroll = $(servicios[i]).children()[3];
-        if (expandidoS == 0) {//expander
-            $(servicios[i]).removeClass('foto');
-            if (expandir==servicios[i]) {
-              $(servicios[i]).addClass('atras').addClass('caja-servicios').delay(500).removeClass('columnas-4');
-              $(portada).fadeOut(100);
-              $(titulo).fadeOut(100);
-              $(galeria).fadeIn(100);
-              $(scroll).delay(350).fadeIn(150);
-            }
-            else {
-              $(servicios[i]).children().hide().delay(500).removeClass('columnas-4');
-              if(width<768){
-                if(clicked%2==0){
-                  $(servicios[clicked+1]).addClass('no-width');
-                }else{
-                  $(servicios[clicked-1]).addClass('no-width');
-                }
-                $(servicios[i]).addClass('no-height');
-              }else{
-                if(clicked<4){
-                  if(i<4){
-                    $(servicios[i]).addClass('no-width');
-                  }else{
-                    $(servicios[i]).addClass('no-height');
-                  }
-                }else{
-                if(i>3){
-                  $(servicios[i]).addClass('no-width').delay(500).addClass('no-height');
-                }else{
-                  $(servicios[i]).addClass('no-height');
-                }
-              }
-              }
-            }
-        }else {//contraer
-          if (sobreimagen==0) {
-            $(servicios[i]).removeClass('no-height').removeClass('no-width').addClass('columnas-4').addClass('foto').removeClass('atras').removeClass('caja-servicios');
-            $(titulo).fadeIn(500);
-            $(galeria).fadeOut(100);
-            $(scroll).fadeOut(100);
-            $(portada).delay(300).fadeIn(300);
-            galeriaServicios=0;
-          }
-        }
-      }
-      if (expandidoS==0) {
-        expandidoS=1;
-      }else{
-        expandidoS=0;
-      }
-    });
-  });//expancion servicios
 
   //expancion modulos
   var modulos = ['#moduloAlfa', '#moduloBeta', '#moduloGamma'];
