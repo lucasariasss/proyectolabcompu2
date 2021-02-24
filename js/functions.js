@@ -24,7 +24,7 @@ $(function(){
       menuAbierto = 0;
     }
   });//menu hamburguesa
-  //obtener posiscion
+  //comprobar posiscion
   var pos = 0;
   function condicion(){
     if (pos<=0) {
@@ -43,7 +43,7 @@ $(function(){
   }//obtener posiscion
   $('#pos0').on('click', function(){
     pos = 0;
-    barraBurger()
+    barraBurger();
     condicion();
     if(width<768){
       $('.logo').fadeOut(500);
