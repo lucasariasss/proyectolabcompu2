@@ -8,7 +8,7 @@ Este proyecto es de una pagina web de juegos de carreras que usa temas de fisica
 
 | Email | Autor|Legajo|
 |-------|------|------|
-|ariasluca1998@gmail.com|Lucas **Arias**|1605137|
+|ariaslucas1998@gmail.com|Lucas **Arias**|1605137|
 |------|Facundo **Lopez Scala**|------|
 
 
