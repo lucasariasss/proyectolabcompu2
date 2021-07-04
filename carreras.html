@@ -9,23 +9,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="second">
-  <header>
-    <h1>simulador de carreras</h1>
+  <header class="barra">
+    <a href="index.html">
+      <h1>simulador de carreras</h1>
+    </a>
+    <div class="link">
+      <a href="armar.html" class="link__enlace activo">
+        <h4>¡crea tu propio auto!</h4>
+      </a>
+      <a href="informacion.html" class="link__enlace">
+        <h4>¿de que se trata?</h4>
+      </a>
+    </div>
   </header>
-  <section class="contenedor">
+  <main class="contenedor">
     <canvas id="canvas" width="1000" height="500"></canvas>
     <script src="js/script.js"></script>
-  </section>
-  <footer id="barra">
-    <a href="index.html">
-      <h4>inicio</h4>
-    </a>
-    <a href="informacion.html">
-      <h4>¿por que?</h4>
-    </a>
-    <a href="armar.html">
-      <h4>jugar de nuevo</h4>
-    </a>
+    
+  </main>
+  <footer class="barra">
+    <p>footer del simulador de carreras Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae consectetur assumenda placeat aperiam nam. Voluptatibus quae necessitatibus quo. Sapiente ullam nam praesentium vero molestias quisquam, obcaecati aspernatur laboriosam qui.</p>
   </footer>
 </body>
 </html>

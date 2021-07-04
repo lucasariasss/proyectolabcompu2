@@ -16,116 +16,37 @@ h3{
   padding:1rem 2rem;
   margin:auto 1rem;
 }
-header{
-  justify-content: center;
+a{
+  text-decoration: none;
   color: white;
-  background-color: black;
-  padding-top: .5rem;
-  margin-bottom: 2rem;
 }
 input{
-  margin: 3rem auto;
   background: none;
   border: none;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 2.4rem;
   font-weight: 700;
-  color: white;
 }
 input:hover{
   color: red;
 }
-/*--aca empiezan las clases--*/
-/*menup, game y second son las clases con los distintos formatos*/
-.menup{
-  background-image: url(../imagenes/index.jpg);
-  background-position: center;
-  background-size: cover;
+/*GENERAL*/
+.white{
+  color: white;
 }
 .second{
   background-image: url(../imagenes/secondary.jpg);
   background-position: center;
   background-size:cover;
-}
-.contenedor{
-  max-width: 120rem;
-  margin: 0 auto;
-}
+}/*fondo de pantalla paginas no principales*/
 
-/*barra con botones en serie*/
-#barra{
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  margin-top: 2rem;
-}
-#barra a{
-  color: white;
-  text-decoration:none;
-  margin-right: 2rem;
-}
-#barra a:last-of-type{
-  margin: 0;
-}
-#barra a:hover{
-  color: red;
-}
-
-/*pone modulos seguidos*/
-.aladear{
-  display: flex;
-  justify-content:space-around;
-}
-.block{
-  display: flex;
-  justify-content:space-around;
-}
-@media(max-width: 1000px){
-  .block{
-    flex-direction: column;
-  }
-}
-
-/*letra blanca*/
-.title{
-  color: white;
-}
-
-/*coloca objetos seguidos de su titulo y opuestos*/
-.seguidillo{
-  display: flex;
-  justify-content:space-between;
-  margin: .5rem;
-}
-/*fondo beige*/
-.beige{
-  background-color: beige;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-select{
-  padding: 1rem 2rem 1rem 2rem;
-  border-radius: .5rem;
-  border: none;
-  width: 100%;
-  color: #333333;
-  text-transform:uppercase;
-}
 .boton{
-  margin: 3rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 2rem auto;
+  padding: .4rem;
   background-color: red;
   text-decoration: none;
-  font-size: 5rem;
   font-weight: 700;
-  color: white;
-  width: 30rem;
-  height: 30rem;
-  border-radius: 15rem;
   border-style: inset;
   border-width: .3rem;
   border-color: #333333;
@@ -134,19 +55,104 @@ select{
   background-color: darkred;
   color: #333333;
   border-style: outset;
-  border-color: #333333;
 }
-.margen-costados{
-  margin-left: 1rem;
-  margin-right: 1rem;
+
+.activo{
+  color: red;
+}/*indica en que pagina estas*/
+
+.aladear{
+  display: flex;
+  justify-content:space-around;
 }
-@media (max-width: 1000px) {
-  .margen-costados{
-    margin-left: 0;
+@media(max-width: 1024px){
+  .block{
+    flex-direction: column;
   }
+}/*ordena modulos*/
+
+/*INDEX*/
+.menup{
+  background-image: url(../imagenes/index.jpg);
+  background-position: center;
+  background-size: cover;
+}/*fondo de pantalla index*/
+
+header{
+  height: 15vh;
 }
+
+.barra{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;;
+  color: white;
+}/*barra con fondo negro*/
+
+.link{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}/*enlaces en horizontal debajo del titulo*/
+
+.link__enlace:hover{
+  color: red;
+}/*enlace cuando le ponen el mouse encima*/
+
+.contenedor{
+  width: calc(100vw - 2rem);
+  max-width: 120rem;
+  margin: 1rem auto;
+  min-height: calc(75vh - 2rem);
+}/*tamaño de la entrada principal de la pagina*/
+
+.boton__index{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 5rem;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 15rem;
+}
+
+/*ARMAR.HTML*/
+select{
+  padding: .5rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  width: 100%;
+  color: #333333;
+  text-transform:uppercase;
+  margin-bottom: .5rem;
+}
+
+/*INFORMACION*/
+.grid{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}/*distribuye los autos con su titulo de manera equitativa*/
+.grid_1_3{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}/*le da un cuarto de espacio a la seccion de motores y 3 a la de transmision*/
+.beige{
+  background-color: beige;
+  margin: .5rem;
+  padding: 1rem;
+}/*fondo beige con un pequeño margen*/
+
 #canvas{
   background-color: beige;
   width: calc(100% - 3rem);
   height: calc(50% - 3rem);
+}
+
+/*footer*/
+footer{
+  text-transform: lowercase;
+  height: 10vh;
 }
