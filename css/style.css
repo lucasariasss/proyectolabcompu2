@@ -20,17 +20,6 @@ a{
   text-decoration: none;
   color: white;
 }
-input{
-  background: none;
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-input:hover{
-  color: red;
-}
 /*GENERAL*/
 .white{
   color: white;
@@ -47,6 +36,8 @@ input:hover{
   background-color: red;
   text-decoration: none;
   font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
   border-style: inset;
   border-width: .3rem;
   border-color: #333333;
@@ -146,9 +137,13 @@ select{
 }/*fondo beige con un pequeño margen*/
 
 #canvas{
-  background-color: beige;
-  width: calc(100% - 3rem);
-  height: calc(50% - 3rem);
+  background-image: url(../imagenes/calle.jpg);
+  background-position: center;
+  background-size: inherit;
+  width: 100%;
+  max-width: 120rem;
+  height: calc(60rem - 10rem);
+  margin-bottom: 1rem;
 }
 
 /*footer*/
