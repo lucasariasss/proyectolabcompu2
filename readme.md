@@ -1,13 +1,15 @@
 # Set Ideas
-## Autor
+## Autores
 * Lucas **Arias**
+* Facundo **Lopez Scala**
 
 ## Contenido/Descripcion
-Este proyecto es una pagina web de un estudio de arquitectura con una animación dentro de un canvas en la pagina principal.
+Este proyecto es de una pagina web de juegos de carreras que usa temas de fisica uno para diseñar autos y sus parametros.
 
-| Email | Autor|
-|-------|------|
-|ariasluca1998@gmail.com|Lucas **Arias**|
+| Email | Autor|Legajo|
+|-------|------|------|
+|ariasluca1998@gmail.com|Lucas **Arias**|1605137|
+|------|Facundo **Lopez Scala**|------|
 
 
 
