@@ -120,6 +120,16 @@ select{
   margin-bottom: .5rem;
 }
 
+#canvas{
+  background-image: url(../imagenes/calle.jpg);
+  background-position: center;
+  background-size: inherit;
+  width: 100%;
+  max-width: 120rem;
+  height: calc(60rem - 10rem);
+  margin-bottom: 1rem;
+}
+
 /*INFORMACION*/
 .grid{
   display: grid;
@@ -135,16 +145,6 @@ select{
   margin: .5rem;
   padding: 1rem;
 }/*fondo beige con un pequeño margen*/
-
-#canvas{
-  background-image: url(../imagenes/calle.jpg);
-  background-position: center;
-  background-size: inherit;
-  width: 100%;
-  max-width: 120rem;
-  height: calc(60rem - 10rem);
-  margin-bottom: 1rem;
-}
 
 /*footer*/
 footer{
