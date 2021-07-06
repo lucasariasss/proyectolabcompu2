@@ -43,18 +43,17 @@ const formulario = document.querySelector("form");
 
 formulario.addEventListener('submit',function(evento){
     evento.preventDefault();
-    //auto 1
+    //define parametros del auto 1
     var c1 = document.querySelector('#carroceria1').value;
     var m1 = 745.7 * document.querySelector('#motor1').value;
     var t1 = document.querySelector('#transmision1').value;
     var a1 = t1*m1/c1;
-    console.log(c1);
-    //auto 2
+    //define parametros del auto 2
     var c2 = document.querySelector('#carroceria2').value;
     var m2 = 745.7 * document.querySelector('#motor2').value;
     var t2 = document.querySelector('#transmision2').value;
     var a2 = t2*m2/c2;
-    //paso de hp a watt por eso multiplico el valor de los motores por 745.7//canvas
+    //paso de hp a watt por eso multiplico el valor de los motores por 745.7
 
     //CANVAS
     var canvas = document.querySelector('canvas');
