@@ -24,15 +24,15 @@
     </header>
     <main class="contenedor">
       <section id="armar">
-        <form action="">
+        <form>
           <div class="aladear title">
             <fieldset name="auto1"><!--auto 1-->
               <legend>
                 <h2 class="white">auto 1</h2>
               </legend>
               <div>
-                <select name="carroceria1" required>
-                  <option value="" disabled selected>--carroceria--</option>
+                <select id="carroceria1" required>
+                  <option value="0" disabled selected>--carroceria--</option>
                   <option value="1000">
                     <h3>formula 1</h3>
                   </option>
@@ -69,8 +69,8 @@
                 </select>
               </div>
               <div>
-                <select name="motor1" required>
-                  <option value="" disabled selected>--motor--</option>
+                <select id="motor1" required>
+                  <option value="0" disabled selected>--motor--</option>
                   <option value="300">
                     <h3>300hp</h3>
                   </option>
@@ -107,8 +107,8 @@
                 </select>
               </div>
               <div>
-                <select name="transmision1" required>
-                  <option value="" disabled selected>--transmision--</option>
+                <select id="transmision1" required>
+                  <option value="0" disabled selected>--transmision--</option>
                   <option value="1">
                     <h3>100%</h3>
                   </option>
@@ -151,8 +151,8 @@
                 <h2 class="white">auto 2</h2>
               </legend>
               <div>
-                <select name="carroceria2" required>
-                  <option value="" disabled selected>--carroceria--</option>
+                <select id="carroceria2" required>
+                  <option value="0" disabled selected>--carroceria--</option>
                   <option value="1000">
                     <h3>formula 1</h3>
                   </option>
@@ -189,8 +189,8 @@
                 </select>
               </div>
               <div>
-                <select name="motor2" required>
-                  <option value="" disabled selected>--motor--</option>
+                <select id="motor2" required>
+                  <option value="0" disabled selected>--motor--</option>
                   <option value="300">
                     <h3>300hp</h3>
                   </option>
@@ -227,8 +227,8 @@
                 </select>
               </div>
               <div>
-                <select name="transmision2" required>
-                  <option value="" disabled selected>--transmision--</option>
+                <select id="transmision2" required>
+                  <option value="0" disabled selected>--transmision--</option>
                   <option value="1">
                     <h3>100%</h3>
                   </option>
@@ -273,9 +273,6 @@
 
       <section id="carrera">
         <canvas id="canvas" width="1000" height="500"></canvas>
-        <form action="">
-          <input type="submit" value="jugar de nuevo" class="white boton">
-        </form>
       </section>
     </main>
     <footer class="barra">

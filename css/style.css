@@ -41,6 +41,7 @@ a{
   border-style: inset;
   border-width: .3rem;
   border-color: #333333;
+  max-width: 30rem;
 }
 .boton:hover{
   background-color: darkred;
@@ -129,7 +130,6 @@ select{
   height: calc(60rem - 10rem);
   margin-bottom: 1rem;
 }
-
 /*INFORMACION*/
 .grid{
   display: grid;
